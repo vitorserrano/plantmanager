@@ -1,9 +1,15 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 import { Button } from '../../components/Button';
 import { Container, Content, Emoji, Title, Subtitle, Footer } from './styles';
 
 export const Confirmation = (): JSX.Element => {
+  const navigation = useNavigation();
+
+  const handleNavigateToPlantSelect = (): void =>
+    navigation.navigate('PlantSelect');
+
   return (
     <Container>
       <Content>
@@ -16,7 +22,7 @@ export const Confirmation = (): JSX.Element => {
         </Subtitle>
 
         <Footer>
-          <Button>Começar</Button>
+          <Button onPress={handleNavigateToPlantSelect}>Começar</Button>
         </Footer>
       </Content>
     </Container>

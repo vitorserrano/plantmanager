@@ -1,13 +1,12 @@
-import { StatusBar, Platform, Dimensions } from 'react-native';
-import { Feather } from '@expo/vector-icons';
-
+import { Dimensions } from 'react-native';
 import styled from 'styled-components/native';
+
+import { Feather } from '@expo/vector-icons';
+import { getStatusBarHeight } from '../../utils/getStatusBarHeight';
 
 export const Wrapper = styled.SafeAreaView`
   flex: 1;
-  padding-top: ${Platform.OS === 'android'
-    ? `${StatusBar.currentHeight}px`
-    : 0};
+  padding-top: ${getStatusBarHeight()};
 `;
 
 export const Container = styled.View`

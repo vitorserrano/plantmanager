@@ -1,4 +1,4 @@
-import React, { ComponentProps, ElementType } from 'react';
+import React, { ComponentProps } from 'react';
 import { TouchableOpacityProps } from 'react-native';
 import { Container, Title } from './styles';
 
