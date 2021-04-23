@@ -1,19 +1,14 @@
-import React from 'react';
-import { Text, TouchableHighlightBase } from 'react-native';
+import React, { ComponentProps, ElementType } from 'react';
+import { TouchableOpacityProps } from 'react-native';
+import { Container, Title } from './styles';
 
-import { Container } from './styles';
+type ButtonProps = ComponentProps<typeof Container> &
+  TouchableOpacityProps & {
+    children: string;
+  };
 
-interface ButtonProps {
-  title: string;
-}
-
-export const Button = ({ title }: ButtonProps) => {
-  return (
-    <Container>
-      <Text>
-        {title}
-      </Text>
-    </Container>
-  );
-}
-
+export const Button = ({ children, ...rest }: ButtonProps): JSX.Element => (
+  <Container {...rest}>
+    <Title>{children}</Title>
+  </Container>
+);
