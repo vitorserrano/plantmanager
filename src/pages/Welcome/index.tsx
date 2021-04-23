@@ -17,8 +17,8 @@ import wateringImg from '../../assets/watering.png';
 export const Welcome = (): JSX.Element => {
   const navigation = useNavigation();
 
-  const handleNavigateToUserIndentification = (): void =>
-    navigation.navigate('UserIndentification');
+  const handleNavigateToUserIdentification = (): void =>
+    navigation.navigate('UserIdentification');
 
   return (
     <Wrapper>
@@ -34,7 +34,7 @@ export const Welcome = (): JSX.Element => {
           sempre que precisar.
         </Subtitle>
 
-        <Button onPress={handleNavigateToUserIndentification}>
+        <Button onPress={handleNavigateToUserIdentification}>
           <ButtonIcon />
         </Button>
       </Container>
