@@ -22,6 +22,7 @@
   "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
   "rules": {
     "camelcase": "off",
+    "consistent-return": "off",
     "react/jsx-wrap-multilines": "off",
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
