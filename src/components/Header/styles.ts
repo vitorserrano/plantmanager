@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
-import { getStatusBarHeight } from '../../utils/getStatusBarHeight';
+
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
   width: 100%;
@@ -8,7 +9,7 @@ export const Container = styled.View`
   align-items: center;
   padding: 20px 0;
   background-color: ${({ theme }) => theme.colors.background};
-  margin-top: ${getStatusBarHeight()};
+  margin-top: ${`${getStatusBarHeight()}px`};
 `;
 
 export const Content = styled.View``;
@@ -24,6 +25,7 @@ export const UserName = styled.Text`
   font-family: ${({ theme }) => theme.fonts.heading};
   color: ${({ theme }) => theme.colors.heading};
   line-height: 40px;
+  text-transform: capitalize;
 `;
 
 export const Image = styled.Image`

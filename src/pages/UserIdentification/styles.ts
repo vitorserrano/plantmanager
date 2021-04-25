@@ -6,7 +6,14 @@ interface InputProps {
   isFilled: boolean;
 }
 
-export const Wrapper = styled.KeyboardAvoidingView.attrs({
+export const Wrapper = styled.SafeAreaView`
+  flex: 1;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+`;
+
+export const Container = styled.KeyboardAvoidingView.attrs({
   behavior: Platform.OS === 'android' ? 'height' : 'padding',
 })`
   flex: 1;
@@ -17,19 +24,12 @@ export const Wrapper = styled.KeyboardAvoidingView.attrs({
 
 export const HiddenButton = styled.TouchableWithoutFeedback<TouchableWithoutFeedbackProps>``;
 
-export const Container = styled.SafeAreaView`
-  flex: 1;
-  width: 100%;
-  align-items: center;
-  justify-content: space-around;
-`;
-
 export const Content = styled.View`
   flex: 1;
   width: 100%;
 `;
 
-export const Form = styled.SafeAreaView`
+export const Form = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
@@ -68,5 +68,5 @@ export const Input = styled.TextInput<InputProps>`
 export const Footer = styled.View`
   width: 100%;
   margin-top: 40px;
-  padding: 20px 0;
+  padding: 0 20px;
 `;
