@@ -2,11 +2,11 @@ import { Dimensions } from 'react-native';
 import styled from 'styled-components/native';
 
 import { Feather } from '@expo/vector-icons';
-import { getStatusBarHeight } from '../../utils/getStatusBarHeight';
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 export const Wrapper = styled.SafeAreaView`
   flex: 1;
-  padding-top: ${getStatusBarHeight()};
+  padding-top: ${`${getStatusBarHeight()}px`};
 `;
 
 export const Container = styled.View`

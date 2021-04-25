@@ -2,7 +2,9 @@ import { FlatList } from 'react-native';
 import styled from 'styled-components/native';
 
 import { UIActivityIndicator } from 'react-native-indicators';
-import { EnvironmentsProps, PlantProps } from './types';
+
+import { EnvironmentsProps } from './types';
+import { PlantProps } from '../../libs/storage';
 
 export const Container = styled.View`
   flex: 1;
